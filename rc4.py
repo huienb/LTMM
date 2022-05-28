@@ -54,3 +54,28 @@ class RC4:
         for i in range(len(cipherText)):
             result += chr(self.keyStream[i]^cipherText[i])
         return result
+
+
+class RC4_Text(RC4):
+    pass
+
+class RC4_IMAGE(RC4):
+    def __init__(self, plainText, key):
+        super().__init__(plainText, key)
+        self.plainText = plainText.copy().flatten()
+        
+    def encrypt(self):
+        arr = []
+        self.KSA()
+        self.PRGA()
+        
+        for i in range(len(self.plainText)):
+            arr = np.append(arr,self.plainText[i]^self.keyStream[i])
+        return np.array(arr, 'uint8');
+    
+    def decrypt(self, cipherText):
+        result = []
+        cipherText = cipherText.copy().flatten()
+        for i in range(len(cipherText)):
+            result = np.append(result,self.keyStream[i]^cipherText[i])
+        return np.array(result, dtype='uint8')
