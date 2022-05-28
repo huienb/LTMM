@@ -10,4 +10,4 @@ Nguyễn Thị Ngọc Linh|20192969
 
 Giảng viên : Đỗ Trọng Tuấn
 
-[Bài trình bày](./L%C3%BD%20thuy%E1%BA%BFt%20m%E1%BA%ADt%20m%C3%A3%201-2.ipynb)
+[Bài trình bày](./L%C3%BD%20thuy%E1%BA%BFt%20m%E1%BA%ADt%20m%C3%A3%20.ipynb)
